@@ -411,4 +411,72 @@ html, body{
      color: #F65954;
      text-decoration: none;
  }
-  
+
+ .fundo{
+    background: url(../img/fundo5.png) no-repeat center 0;
+    padding-top: 40px;
+ }
+ .box-colocar-ingredientes{
+    height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+ }
+ .buscar{
+    background: url(/img/buscar.png) 0 0 no-repeat;
+    width: 34px;
+    height: 34px;
+    border: none;
+}
+.posts-receitas{
+    padding-top: 200px;
+    
+}
+.conteiner-box{
+    width: 33.33%;
+    float: left;
+}
+.post-titulo{
+    color: #2F281E;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+    display: block;
+    padding: 20px 0 15px 0;
+}
+.conteiner{
+    padding-top: 100px;
+    height: 500px;
+}
+.post-img{
+    overflow: hidden;
+    -webkit-border-top-left-radius: 8px;
+-webkit-border-top-right-radius: 8px;
+-moz-border-radius-topleft: 8px;
+-moz-border-radius-topright: 8px;
+border-top-left-radius: 8px;
+border-top-right-radius: 8px;
+}
+.post-espaco{
+    padding: 0 15px;
+}
+.post-link{
+    text-decoration: none;
+}
+.bolinhas{
+    text-align: center;
+    margin-top: 400px;
+}
+.bolinha{
+    background: #122649;
+    opacity: .2;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    margin: 0 10px;
+    border-radius: 16px;
+    
+}
+.bolinha.ativo{
+    background: #FF4F4F;
+    opacity: 1;
+}
