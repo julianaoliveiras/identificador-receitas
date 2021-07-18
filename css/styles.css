@@ -422,7 +422,7 @@ html, body{
     border-radius: 8px;
  }
  .buscar{
-    background: url(/img/buscar.png) 0 0 no-repeat;
+    background: url(/img/busca.png) 0 0 no-repeat;
     width: 34px;
     height: 34px;
     border: none;
