@@ -321,6 +321,8 @@ html, body{
     background: none;
     border: none;
     color: #fff;
+    width: 220px;
+    
 }
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: #fff;
@@ -444,7 +446,7 @@ html, body{
     padding: 20px 0 15px 0;
 }
 .conteiner{
-    padding-top: 100px;
+    padding-top: 80px;
     height: 500px;
 }
 .post-img{
@@ -461,6 +463,10 @@ border-top-right-radius: 8px;
 }
 .post-link{
     text-decoration: none;
+    background: #fff;
+    display: block;
+    padding-bottom: 10px;
+
 }
 .bolinhas{
     text-align: center;
@@ -479,4 +485,48 @@ border-top-right-radius: 8px;
 .bolinha.ativo{
     background: #FF4F4F;
     opacity: 1;
+}
+.fundo6{
+    background: url(../img/fundo7.png) no-repeat center 0;
+    padding-top: 40px;
+}
+.receitas-titulo{
+    text-align: left;
+}
+.paginacao{
+    text-align: center;
+    padding-top: 50px;
+}
+.paginacao-link{
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0 15px;
+    color: #2F281E;
+}
+.paginacao-link.ativo{
+    color: #FF4F4F;
+}
+.paginacao-link:hover{
+    color: #FF4F4F;
+}
+.post-link:hover .post-titulo{
+    color: #FF4F4F;
+}
+.receitas-titulo{
+    font-size: 34px;
+    line-height: 50px;
+    font-weight: 600;
+    color: #342020;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 60px;
+}
+.receitas-subtitulo{
+    font-size: 16px;
+    line-height: 18px;
+    color: #544837;
+    text-align: center;
+}
+.mandar-email.receitas{
+    padding-top: 100px;
 }
