@@ -530,3 +530,7 @@ border-top-right-radius: 8px;
 .mandar-email.receitas{
     padding-top: 100px;
 }
+.fundo7{
+    background: url(../img/fundo7.png) no-repeat center 0;
+    padding-top: 40px;
+}
