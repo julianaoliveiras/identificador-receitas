@@ -6,116 +6,102 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="../css/styles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <title>Identifcador de Receitas</title>
     </head>
-        <body>
-            <div class="fundo8">
-                <div class="centro">
-                    <ul class="menu">
-                        <li class="menu-horizontal"><a href="index.html" class="menu__link">Home</a></li>
-                        <li class="menu-horizontal"><a href="receitas.html"class="menu__link">Receitas</a></li>
-                        <li class="menu-horizontal"><a href="contato.html"class="menu__link">Contato</a></li>
-                        <li class="menu-horizontal"><a href="sobre.html"class="menu__link">Sobre</a></li>
-                        <li class="menu-horizontal"><a href="login.html" class="btn-entrar" onclick="loadDoc1()">Entrar</a></li>
-                    </ul>
-                    <div class="limpar"></div>
-                    
-                </div>
-                <div class="login">
-                    <div class="centro-login">
-                        <div class="espaco-login">
-                            <div class="login-titulo" style="background-image: url(/img/fundo4.png);">
-                                <span class="login-titulo-1">
-                                    Registro de Usuário
-                                </span>
-                            </div>
-                            <form class="login-form ">
-                                <div class="input" >
-                                    <span class="label-input">E-mail</span>
-                                    <input class="form-input" type="text" name="username" placeholder="Entrar com o e-mail">
-                                    <span class="focus"></span>
-                                </div>
-            
-                                <div class="input" >
-                                    <span class="label-input">Senha</span>
-                                    <input class="form-input" type="password" name="pass" placeholder="Entrar com a senha">
-                                    <span class="focus"></span>
-                                </div>
-                                <div class="input" >
-                                    <span class="label-input">Confirme a Senha</span>
-                                    <input class="form-input" type="password" name="pass" placeholder="Entrar com a senha">
-                                    <span class="focus"></span>
-                                </div>
-            
-                                <div class="btn-logar-box">
-                                    <button class="btn-logar">
-                                        Registrar
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="rodape">
-                    <div class="centro">
-                        <div class="rodape-box">
-                            <p class="rodape-descricao">Essa aplicação tem como propósito<br>
-                                encontrar receitas culinárias <br>através dos  
-                                ingredientes que o usuário <br>possui em casa.
-                            </p>
-
-                        </div>
-                        <div class="rodape-menu"> 
-                            <strong class="rodape-titulo">Termos</strong>
-                            <ul>
-                                <li class="rodape-menu-item"><a href="#" class="rodape-link">Docs</a></li>
-                                <li class="rodape-menu-item"><a href="#" class="rodape-link">Suporte Informações</a></li>
-                                <li class="rodape-menu-item"><a href="#" class="rodape-link">Privacidade</a></li>
-                                <li class="rodape-menu-item"><a href="#" class="rodape-link">Gerenciar cookies</a></li>
-                            </ul>
-
-                        </div>
-                        <div class="rodape-menu">
-                            <strong class="rodape-titulo">Paginas</strong>
-                            <ul>
-                                <li class="rodape-menu-item"><a href="#" class="rodape-link">GitHub</a></li>
-                                <li class="rodape-menu-item"><a href="#" class="rodape-link">LinkedIn</a></li>
-                                <li class="rodape-menu-item"><a href="#" class="rodape-link">Facebook</a></li>
-                                <li class="rodape-menu-item"><a href="#" class="rodape-link">Youtube</a></li>
-                            </ul>
-
-                        </div>
-                        <div class="rodape-menu">
-                            <strong class="rodape-titulo">Contato</strong>
-                            <ul>
-                                <li class="rodape-menu-item"><a href="#" class="rodape-link">Fale Conosco</a></li>
-                                <li class="rodape-menu-item"><a href="#" class="rodape-link">Endeços</a></li>
-                                <li class="rodape-menu-item"><a href="#" class="rodape-link">SAC</a></li>
-                                <li class="rodape-menu-item"><a href="#" class="rodape-link">Dúvidas</a></li>
-                            </ul>
-
-                        </div>
-                        <div class="limpar"></div>
-                    </div>
-                </div> 
-                <div class="autor">
-                    <p> Por <a class="fim" href="#">Juliana</a></p>
-                </div>
-
+    <body>
+        <div class="fundo8">
+            <div class="centro">
+                <ul class="menu">
+                    <li class="menu-horizontal"><a href="index.html" class="menu__link">Home</a></li>
+                    <li class="menu-horizontal"><a href="receitas.html"class="menu__link">Receitas</a></li>
+                    <li class="menu-horizontal"><a href="contato.html"class="menu__link">Contato</a></li>
+                    <li class="menu-horizontal"><a href="sobre.html"class="menu__link">Sobre</a></li>
+                    <li class="menu-horizontal"><a href="login.html" class="btn-entrar" onclick="loadDoc1()">Entrar</a></li>
+                </ul><div class="limpar"></div>
             </div>
-            <script>
-                function loadDoc1() {
-                  const xhttp = new XMLHttpRequest();
-                  xhttp.onload = function() {
-                    document.getElementById("demo").innerHTML =
-                    this.responseText;
-                  }
-                  xhttp.open("GET", "login.html");
-                  xhttp.send();
+            <div class="login">
+                <div class="centro-login">
+                    <div class="espaco-login">
+                        <div class="login-titulo" style="background-image: url(../img/fundo4.png);">
+                            <span class="login-titulo-1">Registro de Usuário</span>
+                        </div>
+                        <form class="login-form" action="login.html">
+                            <div class="input" >
+                                <span class="label-input">E-mail</span>
+                                <input class="form-input" type="text" name="username" placeholder="Entrar com o e-mail">
+                                <span class="focus"></span>
+                            </div>
+                            <div class="input" >
+                                <span class="label-input">Senha</span>
+                                <input class="form-input" type="password" name="pass" placeholder="Entrar com a senha">
+                                <span class="focus"></span>
+                            </div>
+                            <div class="input" >
+                                <span class="label-input">Confirme a Senha</span>
+                                <input class="form-input" type="password" name="pass" placeholder="Entrar com a senha">
+                                <span class="focus"></span>
+                            </div>
+                            <div class="btn-logar-box">
+                                <button class="btn-logar"> Registrar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="rodape">
+                <div class="centro">
+                    <div class="rodape-box">
+                        <p class="rodape-descricao">Essa aplicação tem como propósito<br>
+                            encontrar receitas culinárias <br>através dos  
+                            ingredientes que o usuário <br>possui em casa.
+                        </p>
+                    </div>
+                    <div class="rodape-menu"> 
+                        <strong class="rodape-titulo">Termos</strong>
+                        <ul>
+                            <li class="rodape-menu-item"><a href="#" class="rodape-link">Docs</a></li>
+                            <li class="rodape-menu-item"><a href="#" class="rodape-link">Suporte Informações</a></li>
+                            <li class="rodape-menu-item"><a href="#" class="rodape-link">Privacidade</a></li>
+                            <li class="rodape-menu-item"><a href="#" class="rodape-link">Gerenciar cookies</a></li>
+                        </ul>
+                    </div>
+                    <div class="rodape-menu">
+                        <strong class="rodape-titulo">Paginas</strong>
+                        <ul>
+                            <li class="rodape-menu-item"><a href="#" class="rodape-link">GitHub</a></li>
+                            <li class="rodape-menu-item"><a href="#" class="rodape-link">LinkedIn</a></li>
+                            <li class="rodape-menu-item"><a href="#" class="rodape-link">Facebook</a></li>
+                            <li class="rodape-menu-item"><a href="#" class="rodape-link">Youtube</a></li>
+                        </ul>
+                    </div>
+                    <div class="rodape-menu">
+                        <strong class="rodape-titulo">Contato</strong>
+                        <ul>
+                            <li class="rodape-menu-item"><a href="#" class="rodape-link">Fale Conosco</a></li>
+                            <li class="rodape-menu-item"><a href="#" class="rodape-link">Endeços</a></li>
+                            <li class="rodape-menu-item"><a href="#" class="rodape-link">SAC</a></li>
+                            <li class="rodape-menu-item"><a href="#" class="rodape-link">Dúvidas</a></li>
+                        </ul>
+                    </div><div class="limpar"></div>
+                </div>
+            </div> 
+            <div class="autor">
+                <p> Por <a class="fim" href="#">Juliana</a></p>
+            </div>
+        </div>
+        <script>
+            function loadDoc1() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                document.getElementById("demo").innerHTML =
+                this.responseText;
                 }
-            </script>
+                xhttp.open("GET", "login.html");
+                xhttp.send();
+            }
+        </script>
         </body>
     </html>
