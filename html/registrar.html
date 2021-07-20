@@ -12,7 +12,7 @@
         <title>Identifcador de Receitas</title>
     </head>
         <body>
-            <div class="fundo7">
+            <div class="fundo8">
                 <div class="centro">
                     <ul class="menu">
                         <li class="menu-horizontal"><a href="index.html" class="menu__link">Home</a></li>
@@ -20,53 +20,42 @@
                         <li class="menu-horizontal"><a href="contato.html"class="menu__link">Contato</a></li>
                         <li class="menu-horizontal"><a href="sobre.html"class="menu__link">Sobre</a></li>
                         <li class="menu-horizontal"><a href="login.html" class="btn-entrar" onclick="loadDoc1()">Entrar</a></li>
-                        <li class="menu-horizontal"><a href="registrar.html" class="btn-registrar" onclick="loadDoc2()">Registrar</a></li>
-
-                   </ul>
-                   <div class="limpar"></div> 
+                    </ul>
+                    <div class="limpar"></div>
                     
-                    <div class="apresentacao-box">
-                        <div class="apresentacao-img">
-                            <img src="/img/sobre.png" alt="">
-                        </div>
-                        <div class="apresentacao-descricao">
-                            <h2 class="titulo-apresentacao">
-                                <strong>Sobre:</strong><br>
-                                <p class="rodape-descricao">
-                                    A Internet, hoje em dia, é aliada na execução das mais diversas tarefas. Assim sendo, caso queira cozinhar algo com os ingredientes que tem em casa, pode contar com a gente!
-                                    <br><br>
-                                    De forma simples e intuitiva, terá acesso a milhares de receitas deliciosas que se ajustam conforme os alimentos que tenha na despensa ou frigorífico.
-                                    <br><br>
-                                    
-                                    A ideia desse projeto surgiu com o propósito de auxiliar as pessoas na cozinhas com os ingredientes que ela tem em casa. <br>
-                                </p>
-                            </h2>
-                            
-                        </div>
-                        
-                        <div class="limpar"></div>
-                    </div>
                 </div>
-               >
-                <div class="mandar-email">
-                    <div class="centro">
-                        <div class="box-mandar-email">
-                            <div class="caixa-mandar-email">
-                                <div class="content-caixa" >
-                                    <span class="mandar-email-text">Enviei um e-mail <br>sobre o que você achou do <br>projeto!</span> 
-                                <form class="form" action="https://mail.google.com/" method="POST">
-                                    <div class="mandar-email-input-box">
-                                        <div class="mandar-email-icon">
-                                            <input type="text" name="" value="" class="mandar-email-input" placeholder="digitar e-mail">
-                                        </div>
-                                        </div>
-                                    <div class="mandar-email-submit-box">
-                                        <input type="submit" name="" value="" class="mandar-email-submit"></input>
-                                    </div>
-                                </form>
-                                <div class="limpar"></div>
-                                </div>
+                <div class="login">
+                    <div class="centro-login">
+                        <div class="espaco-login">
+                            <div class="login-titulo" style="background-image: url(/img/fundo4.png);">
+                                <span class="login-titulo-1">
+                                    Registro de Usuário
+                                </span>
                             </div>
+                            <form class="login-form ">
+                                <div class="input" >
+                                    <span class="label-input">E-mail</span>
+                                    <input class="form-input" type="text" name="username" placeholder="Entrar com o e-mail">
+                                    <span class="focus"></span>
+                                </div>
+            
+                                <div class="input" >
+                                    <span class="label-input">Senha</span>
+                                    <input class="form-input" type="password" name="pass" placeholder="Entrar com a senha">
+                                    <span class="focus"></span>
+                                </div>
+                                <div class="input" >
+                                    <span class="label-input">Confirme a Senha</span>
+                                    <input class="form-input" type="password" name="pass" placeholder="Entrar com a senha">
+                                    <span class="focus"></span>
+                                </div>
+            
+                                <div class="btn-logar-box">
+                                    <button class="btn-logar">
+                                        Registrar
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -115,6 +104,7 @@
                 <div class="autor">
                     <p> Por <a class="fim" href="#">Juliana</a></p>
                 </div>
+
             </div>
             <script>
                 function loadDoc1() {
@@ -126,15 +116,6 @@
                   xhttp.open("GET", "login.html");
                   xhttp.send();
                 }
-                function loadDoc2() {
-                  const xhttp = new XMLHttpRequest();
-                  xhttp.onload = function() {
-                    document.getElementById("demo").innerHTML =
-                    this.responseText;
-                  }
-                  xhttp.open("GET", "registrar.html");
-                  xhttp.send();
-                }
-                </script>
-    </body>
-</html>
+            </script>
+        </body>
+    </html>

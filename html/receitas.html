@@ -2,20 +2,26 @@
 <html lang="pt-br" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="/css/styles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <title>Identifcador de Receitas</title>
-        <body>
-            <div class="fundo6">
+    </head>
+    <body>
+        <div class="fundo6">
                 <div class="centro">
                     <ul class="menu">
                         <li class="menu-horizontal"><a href="index.html" class="menu__link">Home</a></li>
                         <li class="menu-horizontal"><a href="receitas.html"class="menu__link">Receitas</a></li>
                         <li class="menu-horizontal"><a href="contato.html"class="menu__link">Contato</a></li>
                         <li class="menu-horizontal"><a href="sobre.html"class="menu__link">Sobre</a></li>
-                        <li class="menu-horizontal"><a href="/login/index.html" class="btn-entrar">Entrar</a></li>
-                        <li class="menu-horizontal"><a href="#" class="btn-registrar">Registrar</a></li>
+                        <li class="menu-horizontal"><a href="login.html" class="btn-entrar" onclick="loadDoc1()">Entrar</a></li>
+                        <li class="menu-horizontal"><a href="registrar.html" class="btn-registrar" onclick="loadDoc2()">Registrar</a></li>
+
                    </ul>
                    <div class="limpar"></div> 
                 </div> 
@@ -164,6 +170,25 @@
                     <p> Por <a class="fim" href="#">Juliana</a></p>
                 </div>
             </div>
-        </body>
-    </head>
+            <script>
+                function loadDoc1() {
+                  const xhttp = new XMLHttpRequest();
+                  xhttp.onload = function() {
+                    document.getElementById("demo").innerHTML =
+                    this.responseText;
+                  }
+                  xhttp.open("GET", "login.html");
+                  xhttp.send();
+                }
+                function loadDoc2() {
+                  const xhttp = new XMLHttpRequest();
+                  xhttp.onload = function() {
+                    document.getElementById("demo").innerHTML =
+                    this.responseText;
+                  }
+                  xhttp.open("GET", "registrar.html");
+                  xhttp.send();
+                }
+                </script>
+    </body>
 </html>
