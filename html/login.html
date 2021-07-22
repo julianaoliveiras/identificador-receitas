@@ -10,6 +10,12 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <title>Identifcador de Receitas</title>
+        <script>
+            function funcao1()
+            {
+            alert("Login efetuado com sucesso!");
+            }
+        </script>
     </head>
     <body>
         <div class="fundo8">
@@ -31,17 +37,17 @@
                         <div class="form-group form-group-lg">
                             <form class="login-form" action="identificador.html">
                                 <div class="input" >
-                                    <span class="label-input">E-mail</span>
-                                    <input class="form-input" type="text" name="username" placeholder="Entrar com o e-mail">
-                                    <span class="focus"></span>
+                                    <label for="inputdefault"><span class="label-input">E-mail</span></label>
+                                    <input class="form-input " type="text" name="username" placeholder="Entrar com o e-mail">
                                 </div>
+                            </span>
                                 <div class="input" >
-                                    <span class="label-input">Senha</span>
+                                    <label for="inputdefault"><span class="label-input">Senha</span></label>
                                     <input class="form-input" type="password" name="pass" placeholder="Entrar com a senha">
                                     <span class="focus"></span>
                                 </div>
                                 <div class="btn-logar-box">
-                                    <button class="btn-logar">Login</button>
+                                    <button class="btn btn-default btn-lg btn-logar"onclick="funcao1()">Login</button>
                                 </div>
                             </form>
                             </div> 
