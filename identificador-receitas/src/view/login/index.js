@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './login.css'
+import { Link } from 'react-router-dom';
 import firebase from '../../config/firebase';
 import 'firebase/auth'
 
@@ -8,10 +9,28 @@ function Login(){
   const [senha, setSenha]= useState();
 
     function autenticar(){
+        if(!email || !senha ){
+            alert('Você precisa preencher todos os campos! 😒');
+        }
        firebase.auth().signInWithEmailAndPassword(email, senha).then(resultado=>{
-           alert('oooocerto');
+           alert('Login efetuado com sucesso!');
        }).catch(erro=>{
-           alert(erro);
+           //alert(erro);
+           switch(erro.message){
+            case 'The password is invalid or the user does not have a password.':
+                alert('A senha é inválida');
+                break;
+            case 'There is no user record corresponding to this identifier. The user may have been deleted.':
+                alert('Email inválido!')
+                break;
+            case 'The email address is badly formatted.':
+                alert('O formato do email é inválido!');
+                break;
+            default:
+                alert('Não foi possível cadastrar. Por favor tente mais tarde!');
+                break;
+        }
+           
        })
     }
     return(
