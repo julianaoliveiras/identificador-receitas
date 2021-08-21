@@ -24,7 +24,7 @@ function Home(){
                         <p className="descricao-apresentacao">
                             Um jeito simple e prático de descobrir receitas a partir dos ingredientes que se tem em casa.
                         </p>
-                        <a href="login.html" className="btn-comecar">Começar</a>
+                        <Link to='/login' className="btn-comecar">Começar</Link>
                     </div>
                     <div className="apresentacao-img">
                         <img id="image" src={imgApresentacao}/>

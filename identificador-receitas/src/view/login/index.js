@@ -1,12 +1,19 @@
 import React, {useState} from 'react';
 import './login.css'
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
+
 import firebase from '../../config/firebase';
 import 'firebase/auth'
+import { useSelector, useDispatch } from 'react-redux';
+import Identificador from '../identificador';
+import Menu from '../../componets/menu';
+import Rodape from '../../componets/rodape';
 
 function Login(){
   const [email, setEmail]= useState();
   const [senha, setSenha]= useState();
+
+  const dispatch = useDispatch();
 
     function autenticar(){
         if(!email || !senha ){
@@ -14,7 +21,9 @@ function Login(){
         }
        firebase.auth().signInWithEmailAndPassword(email, senha).then(resultado=>{
            alert('Login efetuado com sucesso!');
-       }).catch(erro=>{
+           dispatch({type: 'LOGIN', usuarioEmail: email})
+       })
+       .catch(erro=>{
            //alert(erro);
            switch(erro.message){
             case 'The password is invalid or the user does not have a password.':
@@ -34,7 +43,13 @@ function Login(){
        })
     }
     return(
+        <div class="fundo8">
+        <div class="centro">
+            <Menu></Menu>
         <div className="login">
+            {
+                useSelector(state => state.usuarioLogado) > 0 ? <Redirect to='/identificador' /> : null
+            }
             <div className="centro-login">
                 <div className="espaco-login">
                     <div className="login-titulo">
@@ -61,6 +76,9 @@ function Login(){
                 </div>
             </div>
         </div>  
+        </div>
+        <Rodape></Rodape>
+        </div>
     );
 }
 export default Login;

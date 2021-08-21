@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import './registrar.css'
 import firebase from '../../config/firebase';
 import 'firebase/auth'
+import Rodape from '../../componets/rodape';
+import Menu from '../../componets/menu';
 
 
 function Registrar(){
@@ -36,6 +38,9 @@ function Registrar(){
         })
     }
     return(
+        <div class="fundo8">
+        <div class="centro">
+            <Menu></Menu>
         <div className="login">
                 <div className="centro-login">
                     <div  className="espaco-login">
@@ -59,6 +64,9 @@ function Registrar(){
                         </form>
                     </div>
                 </div>
+            </div>
+            </div>
+            <Rodape></Rodape>
             </div>
     )
 }

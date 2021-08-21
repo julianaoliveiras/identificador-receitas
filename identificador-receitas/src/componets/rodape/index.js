@@ -14,33 +14,33 @@ function Rodape (){
                         <div className="rodape-menu"> 
                             <strong className="rodape-titulo">Termos</strong>
                             <ul>
-                                <li className="rodape-menu-item"><a href="#" className="rodape-link">Docs</a></li>
-                                <li className="rodape-menu-item"><a href="#" className="rodape-link">Suporte Informações</a></li>
-                                <li className="rodape-menu-item"><a href="#" className="rodape-link">Privacidade</a></li>
-                                <li className="rodape-menu-item"><a href="#" className="rodape-link">Gerenciar cookies</a></li>
+                                <li className="rodape-menu-item"><Link to="#" className="rodape-link">Docs</Link></li>
+                                <li className="rodape-menu-item"><Link to="#" className="rodape-link">Suporte Informações</Link></li>
+                                <li className="rodape-menu-item"><Link to="#" className="rodape-link">Privacidade</Link></li>
+                                <li className="rodape-menu-item"><Link to="#"className="rodape-link">Gerenciar cookies</Link></li>
                             </ul>
                         </div>
                         <div className="rodape-menu">
                             <strong className="rodape-titulo">Paginas</strong>
                             <ul>
-                                <li className="rodape-menu-item"><a href="#" className="rodape-link">GitHub</a></li>
-                                <li className="rodape-menu-item"><a href="#" className="rodape-link">LinkedIn</a></li>
-                                <li className="rodape-menu-item"><a href="#" className="rodape-link">Facebook</a></li>
-                                <li className="rodape-menu-item"><a href="#" className="rodape-link">Youtube</a></li>
+                                <li className="rodape-menu-item"><Link to="#" className="rodape-link">GitHub</Link></li>
+                                <li className="rodape-menu-item"><Link to="#" className="rodape-link">LinkedIn</Link></li>
+                                <li className="rodape-menu-item"><Link to="#" className="rodape-link">Facebook</Link></li>
+                                <li className="rodape-menu-item"><Link to="#" className="rodape-link">Youtube</Link></li>
                             </ul>
                         </div>
                         <div className="rodape-menu">
                             <strong className="rodape-titulo">Contato</strong>
                             <ul>
-                                <li className="rodape-menu-item"><a href="#" className="rodape-link">Fale Conosco</a></li>
-                                <li className="rodape-menu-item"><a href="#" className="rodape-link">Endeços</a></li>
-                                <li className="rodape-menu-item"><a href="#" className="rodape-link">SAC</a></li>
-                                <li className="rodape-menu-item"><a href="#" className="rodape-link">Dúvidas</a></li>
+                                <li className="rodape-menu-item"><Link to="#" className="rodape-link">Fale Conosco</Link></li>
+                                <li className="rodape-menu-item"><Link to="#" className="rodape-link">Endeços</Link></li>
+                                <li className="rodape-menu-item"><Link to="#" className="rodape-link">SAC</Link></li>
+                                <li className="rodape-menu-item"><Link to="#" className="rodape-link">Dúvidas</Link></li>
                             </ul>
                         </div>
                         <div className="limpar"></div>
                         <div className="autor">
-                            <p> Por <a className="fim" href="#">Juliana</a></p>
+                            <p> Por <Link to="#" className="fim">Juliana</Link></p>
                         </div>
                     </div>
         </div>
