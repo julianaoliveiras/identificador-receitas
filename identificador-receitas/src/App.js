@@ -8,6 +8,7 @@ import Login from './view/login';
 import Registrar from './view/registrar';
 import Home from './view/home';
 import Identificador from './view/identificador';
+import NewReceitas from './view/newReceitas';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
      <Route exact path='/login' component={Login}/>
      <Route exact path= '/registrar' component={Registrar}/>
      <Route exact path= '/identificador' component={Identificador}/>
+     <Route exact path= '/newReceitas' component={NewReceitas}/>
      
    </Router>
    </Provider>

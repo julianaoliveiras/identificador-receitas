@@ -47,7 +47,7 @@ function Registrar(){
                         <div  className="login-titulo">
                             <span  className="login-titulo-1">Registro de Usuário</span>
                         </div>
-                        <form  className="login-form" action="login.html">
+                        <form  className="login-form" >
                             <div className="input" >
                                 <span  className="label-input">E-mail</span>
                                 <input  onChange={(e) => setEmail(e.target.value)}  className="form-input" type="text" name="username" placeholder="Entrar com o e-mail"></input>
