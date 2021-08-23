@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { useSelector } from 'react-redux';
 import './identificador.css';
 import { Link } from 'react-router-dom';
@@ -12,10 +12,26 @@ import comida2 from '../img/comida2.jpg';
 import comida1 from '../img/comida1.jpg';
 import Caixa from '../../componets/caixa-email';
 import ReceitaCard from '../../componets/receitaCard';
+import Bolinhas from '../../componets/bolinhas';
 
 
 
 function Identificador(){
+    const [receitas, setReceitas]= useState([]);
+    var listaReceitas=[];
+
+    useEffect( ()=>{
+        firebase.firestore().collection('receitas').get().then(async (resultado)=>{
+            await resultado.docs.forEach(doc=>{
+                listaReceitas.push({
+                    id: doc.id,
+                    ...doc.data()
+                })
+            })
+            setReceitas(listaReceitas);
+        })
+    });
+
     return(
         <>
         
@@ -47,7 +63,19 @@ function Identificador(){
                     </div>
                 </div>
             </div>
-            <ReceitaCard></ReceitaCard>
+            <div className="posts-receitas">
+                <div className="centro">
+                    <h2 className="minha-historia">Aqui estão as possíveis receitas</h2>
+                    <h5 className="minha-descricao">Legal, né?! 🥰 </h5>
+                </div>
+            </div>
+            <div className="row">
+            {
+                receitas.map(item => <ReceitaCard key ={item.id} id={item.id} titulo={item.titulo} descricao={item.descricao} 
+                    imagens={item.imagens}/>)
+            }
+           </div>
+            
             
             <Rodape/>
 
