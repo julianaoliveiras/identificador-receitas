@@ -9,7 +9,7 @@ function ReceitaCard({id, titulo, descricao, imagens}){
         firebase.storage().ref(`Imagens/${imagens}`).getDownloadURL().then( url=>{
             setUrlImagens(url);
         })
-    });
+    }, [urlImagens]);
     return(
         
                 <div className="col-md-3 col-sm-12">

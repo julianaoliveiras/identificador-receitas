@@ -18,15 +18,20 @@ import Bolinhas from '../../componets/bolinhas';
 
 function Identificador(){
     const [receitas, setReceitas]= useState([]);
+    const [pesquisa, setPesquisa]=useState('');
+
     var listaReceitas=[];
 
     useEffect( ()=>{
         firebase.firestore().collection('receitas').get().then(async (resultado)=>{
             await resultado.docs.forEach(doc=>{
-                listaReceitas.push({
-                    id: doc.id,
-                    ...doc.data()
-                })
+                if(doc.data().titulo.indexOf(pesquisa)>=0){
+                    listaReceitas.push({
+                        id: doc.id,
+                        ...doc.data()
+                    })
+                }
+                
             })
             setReceitas(listaReceitas);
         })
@@ -47,12 +52,12 @@ function Identificador(){
                                     <form className="form">
                                         <div className="mandar-email-input-box">
                                             <div className="mandar-email-icon">
-                                                 <input type="text" name="" value="" className="mandar-email-input" placeholder="digite o nome do ingrediente"></input>
+                                                 <input onChange={(e)=> setPesquisa(e.target.value)} type="text"   className="mandar-email-input" placeholder="digite o nome do ingrediente"></input>
                                             </div>
                                         </div>
                                         <div className="mandar-email-submit-box">
                                             <span className="glyphlcon glyphlcon-search">
-                                                <input type="submit" name="" value="" className="buscar"></input>
+                                                <input type="button" name="" value="" className="buscar"></input>
                                             </span>
                                         </div>
                                     </form>
