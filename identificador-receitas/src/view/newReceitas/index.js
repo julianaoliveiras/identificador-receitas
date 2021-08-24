@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Menu from '../../componets/menu';
@@ -6,7 +6,8 @@ import Rodape from '../../componets/rodape';
 
 import firebase from '../../config/firebase';
 
-function NewReceitas(){
+function NewReceitas({match}){
+
     const [titulo, setTitulo]= useState();
     const [descricao, setDescricao]= useState();
     const [categoria, setCategoria]= useState();
@@ -20,7 +21,8 @@ function NewReceitas(){
     const db = firebase.firestore();
 
     const [carregando, setCarregando]= useState(0);
-
+    
+   
 
     function cadastrarReceitas(){
         setCarregando(1);
@@ -53,7 +55,7 @@ function NewReceitas(){
             <Menu/>
             <div className="posts-receitas">
                 <div className="centro">
-                    <h2 className="receitas-titulo">Novas receitas </h2>
+                    <h2 className="receitas-titulo">{match.params.idPost ? 'Editar Receita':'Novas receitas'} </h2>
                     <h5 className="receitas-subtitulo">Estamos prontos para <strong class="negrito">apreciar</strong> sua receita  😍 😍</h5>
                     <br/> 
                 </div>
@@ -62,8 +64,8 @@ function NewReceitas(){
                     <div  className="espaco-login">
                         <form  className="login-form" >
                             <div className="input" >
-                                <span  className="label-input">Título</span>
-                                <input onChange={(e) => setTitulo(e.target.value)} className="form-input" type="text" name="username"></input>
+                                <span  className="label-input" >Título</span>
+                                <input onChange={(e) => setTitulo(e.target.value)} className="form-input" type="text" name="username" value={setTitulo}></input>
                                 <span  className="focus"></span>
                             </div>
                            
@@ -120,7 +122,7 @@ function NewReceitas(){
                                 <span class="visually-hidden">Loading...</span>
                               </div>
                                 : <div  className="btn-logar-box">
-                                <button className="btn btn-default btn-lg btn-logar" type="button" onClick={cadastrarReceitas}> Cadastrar nova receita</button>
+                                <button className="btn btn-default btn-lg btn-logar" type="button" onClick={cadastrarReceitas}> {match.params.idPost ? 'Atualizar Receita':'Cadastrar Receita'}</button>
                             </div>
                             }
 

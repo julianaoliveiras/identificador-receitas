@@ -18,14 +18,14 @@ function Menu(){
                         <>
                         <li className="menu-horizontal"><Link to='/' className="menu__link">Home</Link></li>
                         <li className="menu-horizontal"><Link to="/newReceitas" className="menu__link">Publicar Receitas</Link></li>
-                        <li className="menu-horizontal"><Link to="#" className="menu__link">Sobre</Link></li>
+                        <li className="menu-horizontal"><Link to="/post/meus" className="menu__link">Minhas Receitas</Link></li>
                         <li className="menu-horizontal"><Link className="btn-entrar" onClick={()=> dispatch({type: 'LOGOUT'})}>Sair</Link></li>
                         </>
                         :
                         <>
                         <li className="menu-horizontal"><Link to="/" className="menu__link">Home</Link></li>
                         <li className="menu-horizontal"><Link to="#" className="menu__link">Contato</Link></li>
-                        <li className="menu-horizontal"><Link to="#" className="menu__link">Sobre</Link></li>
+                        <li className="menu-horizontal"><Link to="/sobre" className="menu__link">Sobre</Link></li>
                         <li className="menu-horizontal"><Link className="btn-entrar" to='/login'>Entrar</Link></li>
                         <li className="menu-horizontal"><Link className="btn-registrar" to='/registrar'>Registrar</Link></li>
                         </>

@@ -56,7 +56,7 @@ table {
     margin: 0 auto;
 }
 .apresentacao{
-    background: url(../img/fundo2.png) no-repeat center 0;
+    background: url(../../view/img/fundo2.png) no-repeat center 0;
     padding-top: 40px;
 }
 html, body{
@@ -143,7 +143,7 @@ html, body{
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0,.3);
 }
 #sobre{
-    background: url(../img/fundo3.png) center 0 no-repeat;
+    background: url(../../view/img/fundo3.png) center 0 no-repeat;
     margin-bottom: 100px;
     
 }
@@ -176,7 +176,7 @@ html, body{
 .checklist{
     width: 33px;
     height: 33px;
-    background: url(../img/check.png) 0 0 no-repeat;
+    background: url(../../view/img/check.png) 0 0 no-repeat;
     float: left;
     padding: 0 10 15px 5px;
 }
@@ -277,7 +277,7 @@ html, body{
     padding-top: 300px;
 }
 .box-mandar-email{
-    background: url(../img/fundo4.png) 0 0 no-repeat;
+    background: url(../../view/img/fundo4.png) 0 0 no-repeat;
     height: 300px;
     overflow: hidden;
     border-radius: 8px;
@@ -327,7 +327,7 @@ html, body{
     font-size: 16px
   }
   .mandar-email-submit{
-      background: url(../img/email.png) 0 0 no-repeat;
+      background: url(../../view/img/email.png) 0 0 no-repeat;
       width: 34px;
       height: 34px;
       border: none;
@@ -401,7 +401,7 @@ html, body{
  }
 
  .fundo{
-    background: url(../img/fundo5.png) no-repeat center 0;
+    background: url(../../view/img/fundo5.png) no-repeat center 0;
     padding-top: 40px;
  }
  .box-colocar-ingredientes{
@@ -410,7 +410,7 @@ html, body{
     border-radius: 8px;
  }
  .buscar{
-    background: url(../img/busca.png) 0 0 no-repeat;
+    background: url(../../view/img/busca.png) 0 0 no-repeat;
     width: 34px;
     height: 34px;
     border: none;
@@ -473,7 +473,7 @@ border-top-right-radius: 8px;
     opacity: 1;
 }
 .fundo6{
-    background: url(../img/fundo7.png) no-repeat center 0;
+    background: url(../../view/img/fundo7.png) no-repeat center 0;
     padding-top: 40px;
 }
 .receitas-titulo{
@@ -517,7 +517,7 @@ border-top-right-radius: 8px;
     padding-top: 100px;
 }
 .fundo7{
-    background: url(../img/fundo7.png) no-repeat center 0;
+    background: url(../../view/img/fundo7.png) no-repeat center 0;
     padding-top: 40px;
 }
 input {
@@ -564,7 +564,7 @@ button:hover {
 
 
 .login-titulo {
-    background-image: url(../img/fundo4.png);
+    background-image: url(../../view/img/fundo4.png);
   width: 100%;
   position: relative;
   z-index: 1;
@@ -718,27 +718,6 @@ input.form-input {
   background-color: #333333;
 }
 .fundo8{
-    background: url(../img/fundo1.png) no-repeat center 0;
+    background: url(../../view/img/fundo1.png) no-repeat center 0;
     padding-top: 40px;
-}
-.img-banner{
-    margin: 5px;
-    max-height: 350px;
-    min-height: 300px;
-    width: 100%;
-}
-.box-info{
-    background-color: #FF4F4F;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.box-editar{
-    background-color: #FF4F4F;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 50px;
 }

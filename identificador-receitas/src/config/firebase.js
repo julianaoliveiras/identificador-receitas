@@ -2,15 +2,15 @@ import firebase from 'firebase';
 
 // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
-    apiKey: "AIzaSyCsWDq2M0J4jDImX4V9nxvwfXgI-Gy-fss",
-    authDomain: "receitas-identificador.firebaseapp.com",
-    projectId: "receitas-identificador",
-    storageBucket: "receitas-identificador.appspot.com",
-    messagingSenderId: "839748004296",
-    appId: "1:839748004296:web:6f193240846d5d5891b8fd",
-    measurementId: "G-KV729JPBRQ"
+  const firebaseConfig = {
+    apiKey: "AIzaSyDiJn92aWsRrr4OAEvz8Sw5GqGiyjjMNwI",
+    authDomain: "receitas-96769.firebaseapp.com",
+    projectId: "receitas-96769",
+    storageBucket: "receitas-96769.appspot.com",
+    messagingSenderId: "297899881756",
+    appId: "1:297899881756:web:abc95c6f9c210a99f1f6d9",
+    measurementId: "G-86NY8QLCSF"
   };
   // Initialize Firebase
-  export default firebase.initializeApp(firebaseConfig);
+ export default firebase.initializeApp(firebaseConfig);
  // firebase.analytics();

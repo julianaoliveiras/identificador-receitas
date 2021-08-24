@@ -16,27 +16,45 @@ import Bolinhas from '../../componets/bolinhas';
 
 
 
-function Identificador(){
+function Identificador({match}){
+
     const [receitas, setReceitas]= useState([]);
     const [pesquisa, setPesquisa]=useState('');
+    const usuarioEmail= useSelector(state => state.usuarioEmail);
 
     var listaReceitas=[];
 
     useEffect( ()=>{
-        firebase.firestore().collection('receitas').get().then(async (resultado)=>{
-            await resultado.docs.forEach(doc=>{
-                if(doc.data().titulo.indexOf(pesquisa)>=0){
-                    listaReceitas.push({
-                        id: doc.id,
-                        ...doc.data()
-                    })
-                }
-                
+        if(match.params.parametro){
+            firebase.firestore().collection('receitas').where('usuario', '==', usuarioEmail).get().then(async (resultado)=>{
+                await resultado.docs.forEach(doc=>{
+                    if(doc.data().titulo.indexOf(pesquisa)>=0){
+                        listaReceitas.push({
+                            id: doc.id,
+                            ...doc.data()
+                        })
+                    }
+                })
+                setReceitas(listaReceitas);
             })
-            setReceitas(listaReceitas);
-        })
+
+        }else{
+            firebase.firestore().collection('receitas').get().then(async(resultado)=>{
+                await resultado.docs.forEach(doc=>{
+                    if(doc.data().titulo.indexOf(pesquisa)>=0){
+                        listaReceitas.push({
+                            id: doc.id,
+                            ...doc.data()
+                        })
+                    }
+                })
+                setReceitas(listaReceitas);
+            })
+        }  
     });
 
+
+    
     return(
         <>
         

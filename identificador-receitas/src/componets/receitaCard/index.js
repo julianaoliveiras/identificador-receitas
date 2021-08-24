@@ -17,7 +17,7 @@ function ReceitaCard({id, titulo, descricao, imagens}){
                     <br/><br/><br/>
                         <div className="">
                             <div className="post-espaco">
-                                <Link to={`/detalheReceitas/${id}`} class="post-link">
+                                <Link to={`/receitas/${id}`} class="post-link">
                                     <div className="post-img">
                                         <img src={urlImagens} className="card-img-top img-cartao" />
                                         <span className="post-titulo">{titulo}</span>   

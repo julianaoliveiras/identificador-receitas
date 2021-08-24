@@ -9,6 +9,8 @@ import Registrar from './view/registrar';
 import Home from './view/home';
 import Identificador from './view/identificador';
 import NewReceitas from './view/newReceitas';
+import Receitas from './view/receitas';
+import Sobre from './view/sobre';
 
 function App() {
   return (
@@ -16,10 +18,15 @@ function App() {
    <Router>
      
      <Route exact path='/' component={Home}/>
+     <Route exact path= '/sobre' component={Sobre}/>
      <Route exact path='/login' component={Login}/>
      <Route exact path= '/registrar' component={Registrar}/>
      <Route exact path= '/identificador' component={Identificador}/>
      <Route exact path= '/newReceitas' component={NewReceitas}/>
+     <Route path= '/post/:parametro' component={Identificador}/>
+     <Route path= '/receitas/:idPost' component={Receitas}/>
+     <Route path= '/editarPost/:idPost' component={NewReceitas}/>
+     /editarPost
      
    </Router>
    </Provider>
