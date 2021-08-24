@@ -12,6 +12,7 @@ import NewReceitas from './view/newReceitas';
 import Receitas from './view/receitas';
 import Sobre from './view/sobre';
 import { PersistGate } from 'redux-persist/integration/react';
+import Contato from './view/contato';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
      
      <Route exact path='/' component={Home}/>
      <Route exact path= '/sobre' component={Sobre}/>
+     <Route exact path= '/contato' component={Contato}/>
      <Route exact path='/login' component={Login}/>
      <Route exact path= '/registrar' component={Registrar}/>
      <Route exact path= '/identificador' component={Identificador}/>

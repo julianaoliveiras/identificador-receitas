@@ -101,8 +101,8 @@ function Receitas({match}){
                 
                 {
                     usuarioLogado==post.usuario?
-                    <div  className="btn-logar-box center">
-                    <button className="btn btn-default btn-lg btn-logar" type="button" onClick={remover}> Remover Receita </button>
+                    <div  className="btn-logar-box">
+                    <button className="btn btn-default btn-lg btn-logar w-100" type="button" onClick={remover}> Remover Receita </button>
                     </div>
                     :
                     null
