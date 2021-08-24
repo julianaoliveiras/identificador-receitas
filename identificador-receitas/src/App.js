@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import store from '../src/store';
+import {store, persistor } from '../src/store';
 
 /*Paginas*/
 import Login from './view/login';
@@ -11,10 +11,12 @@ import Identificador from './view/identificador';
 import NewReceitas from './view/newReceitas';
 import Receitas from './view/receitas';
 import Sobre from './view/sobre';
+import { PersistGate } from 'redux-persist/integration/react';
 
 function App() {
   return (
     <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
    <Router>
      
      <Route exact path='/' component={Home}/>
@@ -26,9 +28,9 @@ function App() {
      <Route path= '/post/:parametro' component={Identificador}/>
      <Route path= '/receitas/:idPost' component={Receitas}/>
      <Route path= '/editarPost/:idPost' component={NewReceitas}/>
-     /editarPost
      
    </Router>
+   </PersistGate>
    </Provider>
   );
 }
