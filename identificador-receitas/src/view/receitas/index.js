@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import Menu from '../../componets/menu';
 import Rodape from '../../componets/rodape';
 import './receitas.css';
@@ -10,13 +10,15 @@ import icon from '../img/calendar.png';
 import editar from '../img/editar-arquivo.png';
 import titulo from '../img/titulo.png';
 import lista from '../img/lista.png';
-import livroReceitas from '../img/livro-de-receitas.png'
+import livroReceitas from '../img/livro-de-receitas.png';
+import lixo from '../img/lata-de-lixo.png';
 
 function Receitas({match}){
     const [post, setPost] = useState({});
     const [urlImg, setUrlImg] = useState({});
     const usuarioLogado = useSelector(state => state.usuarioEmail);
     const [carregando, setCarregando] = useState(1);
+    const [excluido, setExcluido]= useState(0);
 
    
 
@@ -30,8 +32,19 @@ function Receitas({match}){
         })
     }, []);
 
+    function remover(){
+        firebase.firestore().collection('receitas').doc(match.params.idPost).delete().then(()=>{
+            setExcluido(1);
+        })
+    }
+
     return(
         <>
+        {
+            excluido? <Redirect to='/identificador'></Redirect>
+            :
+            null
+        }
         <div className="fundo6">
         <Menu></Menu>
         <div className="container">
@@ -85,6 +98,18 @@ function Receitas({match}){
                 :
                 null
                 }
+                
+                {
+                    usuarioLogado==post.usuario?
+                    <div  className="btn-logar-box center">
+                    <button className="btn btn-default btn-lg btn-logar" type="button" onClick={remover}> Remover Receita </button>
+                    </div>
+                    :
+                    null
+
+                }
+                
+                
             
             </div>
          
